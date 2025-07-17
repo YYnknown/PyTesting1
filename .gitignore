@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtualenv
+.venv/
+env/
+venv/
+
+# PyCharm
+.idea/
+
+# VSCode
+.vscode/
+
+# Byte-compiled / optimized / DLL files
+*.so
+*.dll
+*.dylib
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Test reports
+htmlcov/
+.tox/
+.coverage
+coverage.xml
+.pytest_cache/
