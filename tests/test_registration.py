@@ -7,6 +7,7 @@ from pages.registration_page import RegistrationPage
 
 
 def test_registration_invalid_email(driver):
+    """TC-REG-002: Регистрация с некорректным email"""
     page = RegistrationPage(driver)
     page.open()
 
@@ -24,6 +25,7 @@ def test_registration_invalid_email(driver):
 
 
 def test_registration_passwords_do_not_match(driver):
+    """TC-REG-003: Регистрация с несовпадающими паролями"""
     page = RegistrationPage(driver)
     page.open()
 
@@ -41,6 +43,7 @@ def test_registration_passwords_do_not_match(driver):
 
 
 def test_registration_with_weak_password(driver):
+    """TC-REG-004: Регистрация с простым паролем"""
     page = RegistrationPage(driver)
     page.open()
 
@@ -57,6 +60,7 @@ def test_registration_with_weak_password(driver):
 
 
 def test_successful_registration(driver):
+    """TC-REG-001: Успешная регистрация с валидными данными"""
     page = RegistrationPage(driver)
     page.open()
 

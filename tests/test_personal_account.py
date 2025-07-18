@@ -11,6 +11,20 @@ from selenium.common.exceptions import TimeoutException
 
 @pytest.mark.order(1)
 def test_lk_elements(driver):
+    """TC-LK-001: Проверка логотипа Ростелекома
+    TC-LK-002: Проверка ссылки 'Главная'
+    TC-LK-003: Проверка блока 'Мои услуги'
+    TC-LK-004: Проверка ссылки 'Заявки'
+    TC-LK-005: Проверка ссылки 'Финансы'
+    TC-LK-006: Проверка ссылки 'Переезд'
+    TC-LK-007: Проверка иконки уведомлений
+    TC-LK-008: Проверка имени пользователя
+    TC-LK-009: Проверка блока 'Нет лицевых счетов'
+    TC-LK-010: Проверка описания 'Привяжите лицевой счет или закажите новую услугу'
+    TC-LK-011: Проверка кнопки 'Привязать лицевой счет'
+    TC-LK-012: Проверка кнопки 'Заказать новую услугу'
+
+    """
     email = "lakox35234@hosintoy.com"  #ЗДЕСЬ НАДО БУДЕТ ВВЕСТИ НОВУЮ ПОЧТУ
     password = "vXWpQHWT_f+4h35"
 
@@ -95,9 +109,10 @@ def test_lk_elements(driver):
 
 @pytest.mark.order(2)
 def test_lk_clickable1(driver):
+    """TC-LK-013: Проверка баннера 'Дарим подарки...'"""
     wait = WebDriverWait(driver, 10)
 
-    print("Проверка кликабельности баннера '3250'")
+    print("Проверка кликабельности баннера")
     banner = wait.until(
         EC.element_to_be_clickable((By.CSS_SELECTOR, 'a[href="https://lk.rt.ru/#bonus"]'))
     )
@@ -110,6 +125,7 @@ def test_lk_clickable1(driver):
 
 @pytest.mark.order(3)
 def test_lk_clickable2(driver):
+    """TC-LK-014: Проверка блока 'Заказать новую услугу" (второй)'"""
     time.sleep(3)
 
     wait = WebDriverWait(driver, 20)
@@ -127,6 +143,7 @@ def test_lk_clickable2(driver):
 
 @pytest.mark.order(4)
 def test_lk_clickable3(driver):
+    """TC-LK-015:Проверка кликабельности кнопки 'Привязать лицевой счет'"""
     time.sleep(3)
 
     wait = WebDriverWait(driver, 20)
@@ -143,6 +160,7 @@ def test_lk_clickable3(driver):
 
 @pytest.mark.order(5)
 def test_lk_clickable4(driver):
+    """TC-LK-016:Проверка кликабельности кнопки 'Заказать новую услугу'"""
 
     time.sleep(2)
 
@@ -163,6 +181,7 @@ def test_lk_clickable4(driver):
 
 @pytest.mark.order(6)
 def test_lk_clickable5(driver):
+    """TC-LK-017: Проверка кнопки 'Все события'"""
 
     time.sleep(2)
 
@@ -183,6 +202,7 @@ def test_lk_clickable5(driver):
 
 @pytest.mark.order(7)
 def test_lk_clickable6(driver):
+    """TC-LK-018: Проверка кнопки 'Показать еще'"""
     time.sleep(2)
 
     wait = WebDriverWait(driver, 20)
@@ -202,6 +222,7 @@ def test_lk_clickable6(driver):
 
 @pytest.mark.order(8)
 def test_support_chat(driver):
+    """TC-LK-019: Проверка чата: отправка сообщения и ответ оператора"""
 
     wait = WebDriverWait(driver, 30)
 
